@@ -1,5 +1,5 @@
 export class JsonStreamer {
-  private static readonly MAX_CHUNK_SIZE = 1024 * 1024; // 1MB chunk size
+  private static readonly MAX_CHUNK_SIZE = 50 * 1024; // 50kb chunk size
 
   static async* streamify(data: any): AsyncGenerator<any> {
     const serialized = JSON.stringify(data);
